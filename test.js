@@ -42,7 +42,7 @@ describe('isOfficerMove', function() {
   describe('Moves out of board', function() {
     it('Literal or number is invalid', function() {
       assert.equal(isOutOfBoard(translateCoords('`3')), true);
-      assert.equal(isOutOfBoard(translateCoords('b9')), true);
+      assert.equal(isOutOfBoard(translateCoords('b0')), true);
       assert.equal(isOutOfBoard(translateCoords('b10')), true);
       assert.equal(isOutOfBoard(translateCoords('i1')), true);
     });
