@@ -2,7 +2,9 @@ function isOfficerMove(stringFrom, stringTo) {
   const from = translateCoords(stringFrom);
   const to = translateCoords(stringTo);
 
-  if (isOutOfBoard(from) || isOutOfBoard(to)) return false;
+  if (isOutOfBoard(from) || isOutOfBoard(to)) {
+    return false;
+  }
 
   return abs(from.literal - to.literal)
       === abs(from.number - to.number);
