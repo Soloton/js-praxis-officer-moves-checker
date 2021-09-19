@@ -6,8 +6,7 @@ function isOfficerMove(stringFrom, stringTo) {
     return false;
   }
 
-  return abs(from.literal - to.literal)
-      === abs(from.number - to.number);
+  return abs(from.literal - to.literal) === abs(from.number - to.number);
 }
 
 function abs(number) {
@@ -19,10 +18,12 @@ function abs(number) {
 }
 
 function isOutOfBoard(coordinatesObject) {
-  return coordinatesObject.literal < 1
-      || coordinatesObject.literal > 8
-      || coordinatesObject.number < 1
-      || coordinatesObject.number > 8;
+  return (
+    coordinatesObject.literal < 1 ||
+    coordinatesObject.literal > 8 ||
+    coordinatesObject.number < 1 ||
+    coordinatesObject.number > 8
+  );
 }
 
 function translateCoords(coordinates) {
